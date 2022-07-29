@@ -40,13 +40,21 @@ createGrid(gridSize);
 //prompt user for grid size
 function userPrompt() {
 
-   return prompt("How big should the grid be?");
+   let size = prompt("How big should the grid be?");
+
+   if (size > 100) size = 100;
+
+   return size;
 }
 
 //change background color of block
 function changeBackground(el) {
 
-    el.style.backgroundColor = 'black';
+    const colorRed = Math.floor(Math.random() * 255) + 1;
+    const colorGreen = Math.floor(Math.random() * 255) + 1;
+    const colorBlue = Math.floor(Math.random() * 255) + 1;
+
+    el.style.backgroundColor = `rgb(${colorRed},${colorGreen},${colorBlue})`;
 }
 
 //get rid of present children between program runs
