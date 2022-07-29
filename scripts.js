@@ -40,7 +40,14 @@ createGrid(gridSize);
 //prompt user for grid size
 function userPrompt() {
 
-   let size = prompt("How big should the grid be?");
+   let size = parseInt(prompt("How big should the grid be?"));
+
+   //check for invalid input
+   if(typeof size !== "number") {
+
+    alert('Invalid input. Try again');
+    return gridSize;
+   }
 
    if (size > 100) size = 100;
 
