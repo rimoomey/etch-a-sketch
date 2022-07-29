@@ -21,3 +21,13 @@ for(child of gridContainer.childNodes){
         num++;
     }
 }
+
+const blocks = document.querySelectorAll('.grid-block');
+
+function changeBackground(el) {
+
+    el.style.backgroundColor = 'black';
+}
+
+blocks.forEach((block) => block.addEventListener('mouseover', () => 
+                        changeBackground(block)));
