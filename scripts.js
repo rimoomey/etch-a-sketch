@@ -1,5 +1,5 @@
 //grid size constant
-let gridSize = 64;
+let gridSize = 4;
 const gridContainer = document.getElementById('grid_container');
 
 //add grid to html
